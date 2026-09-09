@@ -1,0 +1,69 @@
+{
+  "expo": {
+    "name": "Agon Preview",
+    "slug": "agon-preview",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "scheme": "vibeconnect",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "app.vibeconnect.mobile",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "VibeConnect needs access to your photos so you can share them in posts and messages.",
+        "NSCameraUsageDescription": "VibeConnect uses the camera so you can capture photos, shorts and stories.",
+        "NSMicrophoneUsageDescription": "VibeConnect records audio for voice notes and calls."
+      }
+    },
+    "android": {
+      "package": "app.vibeconnect.mobile",
+      "adaptiveIcon": {
+        "backgroundColor": "#0B0912",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "RECORD_AUDIO",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "552f0665-e30d-4f11-9ea9-97bc22a22809"
+      }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/552f0665-e30d-4f11-9ea9-97bc22a22809"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "owner": "arcadalabs",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "plugins": [
+      "expo-video",
+      "expo-audio",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "VibeConnect needs access to your photos so you can share them in posts and messages.",
+          "cameraPermission": "VibeConnect uses the camera so you can capture photos, shorts and stories."
+        }
+      ],
+      "expo-font"
+    ]
+  }
+}
