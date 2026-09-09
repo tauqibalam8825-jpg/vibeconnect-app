@@ -6,35 +6,25 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
-    "scheme": "vibeconnect",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B0916"
+    },
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "app.vibeconnect.mobile",
-      "infoPlist": {
-        "NSPhotoLibraryUsageDescription": "VibeConnect needs access to your photos so you can share them in posts and messages.",
-        "NSCameraUsageDescription": "VibeConnect uses the camera so you can capture photos, shorts and stories.",
-        "NSMicrophoneUsageDescription": "VibeConnect records audio for voice notes and calls."
-      }
+      "supportsTablet": true
     },
     "android": {
-      "package": "app.vibeconnect.mobile",
       "adaptiveIcon": {
-        "backgroundColor": "#0B0912",
+        "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "permissions": [
-        "RECORD_AUDIO",
-        "CAMERA",
-        "READ_EXTERNAL_STORAGE",
-        "WRITE_EXTERNAL_STORAGE"
-      ],
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "favicon": "./assets/favicon.png",
-      "bundler": "metro"
+      "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
@@ -55,15 +45,12 @@
     ],
     "plugins": [
       "expo-video",
-      "expo-audio",
       [
         "expo-image-picker",
         {
-          "photosPermission": "VibeConnect needs access to your photos so you can share them in posts and messages.",
-          "cameraPermission": "VibeConnect uses the camera so you can capture photos, shorts and stories."
+          "photosPermission": "VibeConnect needs access to your photos so you can post pictures, vibes and stories."
         }
-      ],
-      "expo-font"
+      ]
     ]
   }
 }
